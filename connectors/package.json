@@ -1,0 +1,40 @@
+{
+  "name": "@v18/connectors",
+  "version": "0.1.0",
+  "description": "V18 government and bank login connectors (read only the birth date, decide 18+, keep nothing)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts",
+    "dist/oidc",
+    "dist/saml",
+    "dist/providers",
+    "dist/bankid"
+  ],
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && tsc",
+    "test": "node --test --test-reporter=spec --test-concurrency=1 \"dist/tests/**/*.test.js\""
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "private": true,
+  "dependencies": {
+    "@node-saml/node-saml": "5.2.0",
+    "@xmldom/xmldom": "0.8.15",
+    "jose": "6.2.18",
+    "openid-client": "6.9.1",
+    "xml-crypto": "6.4.0"
+  },
+  "devDependencies": {
+    "@peculiar/x509": "1.14.3",
+    "@types/node": "22.19.1",
+    "oidc-provider": "9.15.1",
+    "typescript": "5.9.3"
+  },
+  "overrides": {
+    "@xmldom/xmldom": "0.8.15"
+  }
+}
