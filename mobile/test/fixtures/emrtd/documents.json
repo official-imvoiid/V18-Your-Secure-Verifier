@@ -1,0 +1,24 @@
+{
+ "about": "TEST ONLY. Made-up holders of the ICAO specimen country Utopia (UTO), signed by the V18 TEST CSCA. Made by tool/make_emrtd_fixtures.py.",
+ "made": "2026-11-23",
+ "documents": {
+  "adult": {
+   "mrz": "P<UTOTESTER<<ADA<<<<<<<<<<<<<<<<<<<<<<<<<<<<V18T000012UTO9001011<3512311<<<<<<<<<<<<<<04",
+   "documentNumber": "V18T00001",
+   "dateOfBirth": "900101",
+   "dateOfExpiry": "351231",
+   "issuingState": "UTO",
+   "docType": "P",
+   "aaPrivateKeyD": "a6692278b1329380a86979e9f5c89d7ffda47e04381c69e33881742b54ad41b8"
+  },
+  "minor": {
+   "mrz": "P<UTOTESTER<<MINA<<<<<<<<<<<<<<<<<<<<<<<<<<<V18T000023UTO1205053<3212312<<<<<<<<<<<<<<06",
+   "documentNumber": "V18T00002",
+   "dateOfBirth": "120505",
+   "dateOfExpiry": "321231",
+   "issuingState": "UTO",
+   "docType": "P",
+   "aaPrivateKeyD": "18800471a09417269b0d2d34eb7a46c6b9f30f1639b85536d474621e66b92f6b"
+  }
+ }
+}

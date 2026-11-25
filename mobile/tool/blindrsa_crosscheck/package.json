@@ -1,0 +1,9 @@
+{
+  "name": "v18-mobile-blindrsa-crosscheck",
+  "private": true,
+  "type": "module",
+  "description": "Cross-test helper: checks the Dart RFC 9474 client against @cloudflare/blindrsa-ts (the library the V18 server uses).",
+  "dependencies": {
+    "@cloudflare/blindrsa-ts": "0.4.6"
+  }
+}

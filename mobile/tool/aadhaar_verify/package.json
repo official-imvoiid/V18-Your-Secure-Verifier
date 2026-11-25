@@ -1,0 +1,10 @@
+{
+  "name": "v18-mobile-aadhaar-verify",
+  "private": true,
+  "description": "Checks a proof made by the phone's native prover with the official verifiers: snarkjs groth16.verify and @anon-aadhaar/core verify().",
+  "type": "commonjs",
+  "dependencies": {
+    "@anon-aadhaar/core": "2.4.3",
+    "snarkjs": "0.7.5"
+  }
+}
