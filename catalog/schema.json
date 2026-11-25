@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.v18.example/catalog/schema.json",
+  "title": "V18 country catalog",
+  "description": "catalog/countries.json, following PROTOCOL.md 4d.2. Optional extras: top-level 'updated' and 'status'; per method 'since' and 'note'.",
+  "type": "object",
+  "required": ["version", "countries"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": 1 },
+    "updated": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "status": { "enum": ["draft", "final"] },
+    "countries": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/country" } }
+  },
+  "$defs": {
+    "country": {
+      "type": "object",
+      "required": ["code", "name", "region", "methods"],
+      "additionalProperties": false,
+      "properties": {
+        "code": { "type": "string", "pattern": "^[A-Z]{2}$", "description": "ISO 3166-1 alpha-2 (the UK is GB, Greece is GR)" },
+        "name": { "type": "string", "minLength": 1 },
+        "region": { "enum": ["europe", "asia"] },
+        "methods": { "type": "array", "items": { "$ref": "#/$defs/method" } }
+      }
+    },
+    "method": {
+      "type": "object",
+      "required": ["method", "label", "documents", "needs", "privacy", "platforms"],
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "type": "string",
+          "pattern": "^(anon_aadhaar|emrtd_attested|philsys_qr_attested|mynumber_attested|mdoc_app|mdoc_wallet|face_estimate|connector:(singpass|digilocker|uaepass|bankid_se|bankid_no|mitid|itsme|franceconnect|spid|cie|digid|freja))$"
+        },
+        "label": { "type": "string", "minLength": 1 },
+        "documents": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "docTypes": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["P", "I", "A", "C"] } },
+        "needs": { "type": "array", "uniqueItems": true, "items": { "enum": ["camera", "nfc", "wallet", "password"] } },
+        "privacy": { "enum": ["zero_knowledge", "on_device", "wallet", "login", "estimate"] },
+        "platforms": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["android", "windows", "web"] } },
+        "since": { "type": "integer", "minimum": 1990, "maximum": 2100, "description": "Year issuance of this document type began" },
+        "note": { "type": "string", "minLength": 1, "description": "One plain-English sentence for the user" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "method": { "const": "emrtd_attested" } } },
+          "then": { "required": ["docTypes"] },
+          "else": { "not": { "required": ["docTypes"] } }
+        },
+        {
+          "if": { "properties": { "method": { "const": "anon_aadhaar" } } },
+          "then": { "properties": { "privacy": { "const": "zero_knowledge" }, "platforms": { "$ref": "#/$defs/androidAndWindows" } } }
+        },
+        {
+          "if": { "properties": { "method": { "enum": ["emrtd_attested", "philsys_qr_attested", "mynumber_attested"] } } },
+          "then": { "properties": { "privacy": { "const": "on_device" }, "platforms": { "$ref": "#/$defs/androidOnly" } } }
+        },
+        {
+          "if": { "properties": { "method": { "const": "mdoc_app" } } },
+          "then": { "properties": { "privacy": { "const": "wallet" }, "platforms": { "$ref": "#/$defs/androidOnly" } } }
+        },
+        {
+          "if": { "properties": { "method": { "const": "mdoc_wallet" } } },
+          "then": { "properties": { "privacy": { "const": "wallet" }, "platforms": { "$ref": "#/$defs/webOnly" } } }
+        },
+        {
+          "if": { "properties": { "method": { "const": "face_estimate" } } },
+          "then": { "properties": { "privacy": { "const": "estimate" }, "platforms": { "$ref": "#/$defs/androidOnly" } } }
+        },
+        {
+          "if": { "properties": { "method": { "pattern": "^connector:" } } },
+          "then": { "properties": { "privacy": { "const": "login" }, "platforms": { "$ref": "#/$defs/androidAndWindows" } } }
+        }
+      ]
+    },
+    "androidOnly": { "type": "array", "minItems": 1, "maxItems": 1, "items": { "const": "android" } },
+    "webOnly": { "type": "array", "minItems": 1, "maxItems": 1, "items": { "const": "web" } },
+    "androidAndWindows": { "type": "array", "minItems": 2, "maxItems": 2, "uniqueItems": true, "items": { "enum": ["android", "windows"] } }
+  }
+}

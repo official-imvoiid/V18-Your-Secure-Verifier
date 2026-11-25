@@ -1,0 +1,2629 @@
+{
+  "version": 1,
+  "updated": "2026-11-24",
+  "countries": [
+    {
+      "code": "AT",
+      "name": "Austria",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Austrian passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Austrian ID card (Personalausweis) issued since 2 August 2021"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2021,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Austrian residence permit for non-EU citizens",
+            "Austrian residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Belgian passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Belgian eID card"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2020,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Belgian residence permit for non-EU citizens",
+            "Belgian residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        },
+        {
+          "method": "connector:itsme",
+          "label": "itsme",
+          "documents": [
+            "itsme app"
+          ],
+          "needs": [
+            "password"
+          ],
+          "privacy": "login",
+          "platforms": [
+            "android",
+            "windows"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "BG",
+      "name": "Bulgaria",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Bulgarian passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Bulgarian ID card (лична карта) issued since 17 June 2024"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2024,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Bulgarian residence permit for non-EU citizens",
+            "Bulgarian residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "HR",
+      "name": "Croatia",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Croatian passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Croatian ID card (osobna iskaznica) issued since 2 August 2021"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2021,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Croatian residence permit for non-EU citizens",
+            "Croatian residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "CY",
+      "name": "Cyprus",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Cypriot passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Cypriot ID card issued since August 2020"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2020,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Cypriot residence permit for non-EU citizens",
+            "Cypriot residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "CZ",
+      "name": "Czechia",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Czech passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Czech ID card (občanský průkaz) issued since 2 August 2021"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2021,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Czech residence permit for non-EU citizens",
+            "Czech residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "DK",
+      "name": "Denmark",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Danish passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "connector:mitid",
+          "label": "MitID",
+          "documents": [
+            "MitID app"
+          ],
+          "needs": [
+            "password"
+          ],
+          "privacy": "login",
+          "platforms": [
+            "android",
+            "windows"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "EE",
+      "name": "Estonia",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Estonian passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Estonian residence permit for non-EU citizens",
+            "Estonian residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "FI",
+      "name": "Finland",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Finnish passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Finnish residence permit for non-EU citizens",
+            "Finnish residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "French passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "French ID card (carte nationale d'identité) in the bank-card format, issued since 2021"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2021,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "French residence permit for non-EU citizens",
+            "French residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        },
+        {
+          "method": "connector:franceconnect",
+          "label": "FranceConnect",
+          "documents": [
+            "A FranceConnect login, for example impots.gouv.fr or ameli.fr"
+          ],
+          "needs": [
+            "password"
+          ],
+          "privacy": "login",
+          "platforms": [
+            "android",
+            "windows"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "German passport (Reisepass)"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "German ID card (Personalausweis) issued since 1 November 2010"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2010,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "German residence permit for non-EU citizens",
+            "German residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "GR",
+      "name": "Greece",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Greek passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Greek ID card (new type with chip, issued since 2023)"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2023,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Greek residence permit for non-EU citizens",
+            "Greek residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "HU",
+      "name": "Hungary",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Hungarian passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Hungarian e-ID card (eSzemélyi) issued since 1 January 2016"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2016,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Hungarian residence permit for non-EU citizens",
+            "Hungarian residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Irish passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Italian passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Italian electronic ID card (CIE 3.0)"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2016,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Italian residence permit for non-EU citizens",
+            "Italian residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        },
+        {
+          "method": "connector:spid",
+          "label": "SPID",
+          "documents": [
+            "SPID digital identity"
+          ],
+          "needs": [
+            "password"
+          ],
+          "privacy": "login",
+          "platforms": [
+            "android",
+            "windows"
+          ]
+        },
+        {
+          "method": "connector:cie",
+          "label": "CIE (Entra con CIE)",
+          "documents": [
+            "Italian electronic ID card (CIE) with the CieID app"
+          ],
+          "needs": [
+            "password"
+          ],
+          "privacy": "login",
+          "platforms": [
+            "android",
+            "windows"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "LV",
+      "name": "Latvia",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Latvian passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Latvian eID card"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Latvian residence permit for non-EU citizens",
+            "Latvian residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "LT",
+      "name": "Lithuania",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Lithuanian passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Lithuanian ID card"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Lithuanian residence permit for non-EU citizens",
+            "Lithuanian residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "LU",
+      "name": "Luxembourg",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Luxembourg passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Luxembourg ID card"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Luxembourg residence permit for non-EU citizens",
+            "Luxembourg residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        },
+        {
+          "method": "connector:itsme",
+          "label": "itsme",
+          "documents": [
+            "itsme app"
+          ],
+          "needs": [
+            "password"
+          ],
+          "privacy": "login",
+          "platforms": [
+            "android",
+            "windows"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "MT",
+      "name": "Malta",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Maltese passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Maltese ID card (new type with CAN, issued since 2020)"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2020,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Maltese residence permit for non-EU citizens",
+            "Maltese residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Dutch passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Dutch ID card (identiteitskaart)"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Dutch residence permit for non-EU citizens",
+            "Dutch residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        },
+        {
+          "method": "connector:itsme",
+          "label": "itsme",
+          "documents": [
+            "itsme app"
+          ],
+          "needs": [
+            "password"
+          ],
+          "privacy": "login",
+          "platforms": [
+            "android",
+            "windows"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PL",
+      "name": "Poland",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Polish passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Polish ID card (e-dowód) issued since 4 March 2019"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2019,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Polish residence permit for non-EU citizens",
+            "Polish residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "PT",
+      "name": "Portugal",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Portuguese passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Portuguese Citizen Card (Cartão de Cidadão) issued since June 2024, with a CAN on the front"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2024,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Portuguese residence permit for non-EU citizens",
+            "Portuguese residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "RO",
+      "name": "Romania",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Romanian passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Romanian electronic ID card (carte electronică de identitate, CEI)"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2025,
+          "note": "Only the electronic ID card (CEI) has a chip. The simple ID card (carte de identitate simplă) and older cards do not."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Romanian residence permit for non-EU citizens",
+            "Romanian residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "SK",
+      "name": "Slovakia",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Slovak passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Slovak ID card (občiansky preukaz) issued since 1 December 2022"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2022,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Slovak residence permit for non-EU citizens",
+            "Slovak residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "SI",
+      "name": "Slovenia",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Slovenian passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Slovenian biometric ID card (osebna izkaznica) issued since 28 March 2022"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2022,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Slovenian residence permit for non-EU citizens",
+            "Slovenian residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Spanish passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Spanish ID card (DNIe 3.0 or newer)"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2015,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Spanish residence permit for non-EU citizens",
+            "Spanish residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Swedish passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Swedish national ID card (nationellt id-kort)"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Swedish residence permit for non-EU citizens",
+            "Swedish residence card for family members of EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        },
+        {
+          "method": "connector:bankid_se",
+          "label": "BankID",
+          "documents": [
+            "Swedish BankID app"
+          ],
+          "needs": [
+            "password"
+          ],
+          "privacy": "login",
+          "platforms": [
+            "android",
+            "windows"
+          ]
+        },
+        {
+          "method": "connector:freja",
+          "label": "Freja eID",
+          "documents": [
+            "Freja eID app"
+          ],
+          "needs": [
+            "password"
+          ],
+          "privacy": "login",
+          "platforms": [
+            "android",
+            "windows"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS",
+      "name": "Iceland",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Icelandic passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Icelandic ID card (nafnskírteini) issued since March 2024"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2024,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Icelandic residence permit for non-EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "LI",
+      "name": "Liechtenstein",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Liechtenstein passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Liechtenstein residence permit for non-EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "NO",
+      "name": "Norway",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Norwegian passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Norwegian national ID card (nasjonalt ID-kort)"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2020,
+          "note": "The app reads the chip with the code printed on the card: the 6-digit card access number (CAN), or the machine-readable lines on cards without a CAN."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Norwegian residence permit for non-EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        },
+        {
+          "method": "connector:bankid_no",
+          "label": "BankID",
+          "documents": [
+            "Norwegian BankID"
+          ],
+          "needs": [
+            "password"
+          ],
+          "privacy": "login",
+          "platforms": [
+            "android",
+            "windows"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "UK passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland",
+      "region": "europe",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Swiss passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Swiss ID card with chip (optional, issued since 2 November 2026)"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2026,
+          "note": "Only the new ID card with a chip, which you can choose since 2 November 2026. ID cards without a chip don't work."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Residence permit (chip)",
+          "documents": [
+            "Swiss residence permit for non-EU citizens"
+          ],
+          "docTypes": [
+            "A",
+            "C",
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "For non-EU citizens' residence permits in the EU card format. The app reads the chip with the CAN printed on the card, or the machine-readable lines on older cards."
+        }
+      ]
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "anon_aadhaar",
+          "label": "Aadhaar QR",
+          "documents": [
+            "Aadhaar letter",
+            "Aadhaar PVC card",
+            "e-Aadhaar PDF",
+            "mAadhaar app QR"
+          ],
+          "needs": [
+            "camera"
+          ],
+          "privacy": "zero_knowledge",
+          "platforms": [
+            "android",
+            "windows"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Indian e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2024,
+          "note": "Only passports issued since 2024 have a chip (every new passport since May 2025). Look for the gold chip symbol on the cover."
+        },
+        {
+          "method": "connector:digilocker",
+          "label": "DigiLocker",
+          "documents": [
+            "DigiLocker account"
+          ],
+          "needs": [
+            "password"
+          ],
+          "privacy": "login",
+          "platforms": [
+            "android",
+            "windows"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PH",
+      "name": "Philippines",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Philippine e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Japanese passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Singapore passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "connector:singpass",
+          "label": "Singpass",
+          "documents": [
+            "Singpass app (Myinfo)"
+          ],
+          "needs": [
+            "password"
+          ],
+          "privacy": "login",
+          "platforms": [
+            "android",
+            "windows"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "South Korean e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "VN",
+      "name": "Vietnam",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Vietnamese passport with chip"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2023,
+          "note": "Chip passports are issued since 1 March 2023, and getting one is optional. Passports without a chip don't work."
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Vietnamese chip ID card (Căn cước công dân gắn chip, since 2021)",
+            "Vietnamese ID card (Căn cước, since 1 July 2024)"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2021,
+          "note": "The app reads the chip with the machine-readable lines on the back of the card."
+        }
+      ]
+    },
+    {
+      "code": "ID",
+      "name": "Indonesia",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Indonesian e-passport (paspor elektronik)"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "Only the electronic passport (e-paspor) has a chip. Indonesia still issues passports without one."
+        }
+      ]
+    },
+    {
+      "code": "MY",
+      "name": "Malaysia",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Malaysian passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "TH",
+      "name": "Thailand",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Thai e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PK",
+      "name": "Pakistan",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Pakistani e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2022,
+          "note": "Only e-passports have a chip. They are issued at all passport offices since 16 August 2023."
+        }
+      ]
+    },
+    {
+      "code": "BD",
+      "name": "Bangladesh",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Bangladeshi e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "Only e-passports have a chip. Older machine-readable passports don't work."
+        }
+      ]
+    },
+    {
+      "code": "LK",
+      "name": "Sri Lanka",
+      "region": "asia",
+      "methods": []
+    },
+    {
+      "code": "NP",
+      "name": "Nepal",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Nepali e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2021,
+          "note": "Only e-passports, issued since 17 November 2021, have a chip. Older machine-readable passports don't work."
+        }
+      ]
+    },
+    {
+      "code": "AE",
+      "name": "United Arab Emirates",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "UAE e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "SA",
+      "name": "Saudi Arabia",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Saudi e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2022,
+          "note": "Only the electronic passport, issued since February 2022, has a chip. Older passports don't work."
+        }
+      ]
+    },
+    {
+      "code": "QA",
+      "name": "Qatar",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Qatari e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2008
+        }
+      ]
+    },
+    {
+      "code": "KW",
+      "name": "Kuwait",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Kuwaiti e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "note": "Only the electronic passport has a chip. Older passports don't work."
+        }
+      ]
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Chinese e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HK",
+      "name": "Hong Kong",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "HKSAR e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "TW",
+      "name": "Taiwan",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Taiwan (ROC) e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IL",
+      "name": "Israel",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Israeli biometric passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "TR",
+      "name": "Turkey",
+      "region": "asia",
+      "methods": [
+        {
+          "method": "emrtd_attested",
+          "label": "Passport (chip)",
+          "documents": [
+            "Turkish e-passport"
+          ],
+          "docTypes": [
+            "P"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ]
+        },
+        {
+          "method": "emrtd_attested",
+          "label": "ID card (chip)",
+          "documents": [
+            "Turkish ID card (T.C. Kimlik Kartı) issued since 2017"
+          ],
+          "docTypes": [
+            "I"
+          ],
+          "needs": [
+            "nfc"
+          ],
+          "privacy": "on_device",
+          "platforms": [
+            "android"
+          ],
+          "since": 2017,
+          "note": "The app reads the chip with the machine-readable lines on the back of the card."
+        }
+      ]
+    }
+  ]
+}
