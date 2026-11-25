@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reserve Cellar · Welcome in</title>
+<link rel="stylesheet" href="/site.css">
+</head>
+<body class="unlocked">
+  <div class="site">
+    <header class="site-h"><span class="site-logo">Reserve Cellar</span>
+      <nav class="site-nav" aria-label="Shop"><span>Wines</span><span>Whisky</span><span>Champagne</span><span>Gin</span></nav>
+      <button class="btn" id="lock">Lock the site again</button></header>
+
+    <section class="site-hero hero-in">
+      <h1 class="disp">Welcome in</h1>
+      <p class="muted">Your age was checked privately. Enjoy the site.</p>
+    </section>
+
+    <main>
+      <h2 class="sec">The reserve collection</h2>
+      <div class="grid">
+        <article class="card"><div class="bottle" aria-hidden="true">🍷</div><h3>Château Latour Grand Vin</h3><p class="muted">Pauillac, France · 2010</p><p class="price">$1,450</p></article>
+        <article class="card"><div class="bottle" aria-hidden="true">🥃</div><h3>Macallan Sherry Oak 25</h3><p class="muted">Speyside single malt</p><p class="price">$2,600</p></article>
+        <article class="card"><div class="bottle" aria-hidden="true">🍾</div><h3>Krug Clos d'Ambonnay</h3><p class="muted">Champagne · 2002</p><p class="price">$3,100</p></article>
+        <article class="card"><div class="bottle" aria-hidden="true">🍸</div><h3>Ki No Bi Kyoto Dry Gin</h3><p class="muted">Kyoto, Japan</p><p class="price">$180</p></article>
+      </div>
+
+<!--DEV-->
+      <section class="dev" aria-labelledby="replay-title" id="replayTools" hidden>
+        <div class="dev-h"><h2 id="replay-title">Replay-attack demo <span class="tag">dev only</span></h2></div>
+        <p class="small">You got in with a one-time ticket. What if someone copies it? This button takes that
+          same ticket from this visit and attacks the site with it three ways. Nothing gets unlocked.</p>
+        <div class="btns"><button class="btn pri" id="replay">Run the replay attack</button></div>
+        <ol class="attacks" id="attacks" aria-live="polite"></ol>
+      </section>
+<!--/DEV-->
+    </main>
+  </div>
+
+  <div class="pill" role="status" id="pill">
+    <span class="si-ok" aria-hidden="true">✓</span>
+    <span><b>You're in. Age checked with V18.</b><br><span class="small" id="pillText">This site only learned one thing: 18+.</span></span>
+    <button class="x" id="pillClose" aria-label="Close message">✕</button>
+  </div>
+
+  <script nonce="{{NONCE}}">
+  (function () {
+    document.getElementById('pillText').textContent = location.host + ' only learned one thing: 18+.';
+    document.getElementById('pillClose').onclick = function () { document.getElementById('pill').hidden = true; };
+    document.getElementById('lock').onclick = async function () {
+      await fetch('/api/lock', { method: 'POST' });
+      location.href = '/';
+    };
+  })();
+  </script>
+<!--DEV-->
+  <script nonce="{{NONCE}}">
+  (function () {
+    // The replay demo is a developer tool: shown only when the V18 server is in dev mode.
+    fetch('/api/status').then(function (r) { return r.json(); }).then(function (s) {
+      if (s.v18 && s.v18.devMode) document.getElementById('replayTools').hidden = false;
+    }).catch(function () {});
+    var EXPLAIN = {
+      CHALLENGE_MISMATCH: 'Refused: the challenge for this visit was already used up. Each ticket is tied to one visit.',
+      REPLAY_DETECTED: 'Refused by the replay cache: this ticket ID was already used once.',
+      INVALID_SIGNATURE: 'Refused: the V18 seal does not match. Nobody can make a seal without V18\'s private key.',
+      TICKET_EXPIRED: 'Refused: tickets only last 5 minutes (plus 1 minute for clock drift).',
+      ORIGIN_MISMATCH: 'Refused: the ticket was made for another website.'
+    };
+    document.getElementById('replay').onclick = async function () {
+      var list = document.getElementById('attacks');
+      list.innerHTML = '';
+      var r = await fetch('/api/demo/replay', { method: 'POST' });
+      var d = await r.json();
+      if (!r.ok) {
+        var li = document.createElement('li'); li.textContent = d.error; list.appendChild(li); return;
+      }
+      d.attacks.forEach(function (a) {
+        var li = document.createElement('li');
+        li.className = a.result.valid ? 'bad' : 'good';
+        var t = document.createElement('b'); t.textContent = a.name;
+        var c = document.createElement('div');
+        c.className = 'small';
+        c.textContent = a.result.valid
+          ? 'ACCEPTED. This should never happen.'
+          : (a.result.code + ': ' + (EXPLAIN[a.result.code] || a.result.error));
+        li.appendChild(t); li.appendChild(c); list.appendChild(li);
+      });
+    };
+  })();
+  </script>
+<!--/DEV-->
+</body>
+</html>

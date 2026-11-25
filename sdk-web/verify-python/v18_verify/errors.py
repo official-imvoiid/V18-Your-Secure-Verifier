@@ -1,0 +1,28 @@
+"""Every reason a ticket can be refused. Rule numbers point at PROTOCOL.md section 3.7."""
+
+CONFIG_ERROR = "CONFIG_ERROR"  # the website passed a bad origin or age
+CHALLENGE_REQUIRED = "CHALLENGE_REQUIRED"  # rule 5: the website did not say which challenge it issued
+INVALID_FORMAT = "INVALID_FORMAT"  # not "<keyId>.<prepared>.<signature>" in base64url
+KEYS_UNAVAILABLE = "KEYS_UNAVAILABLE"  # could not load V18's public keys
+UNKNOWN_KEY = "UNKNOWN_KEY"  # rule 1
+KEY_EXPIRED = "KEY_EXPIRED"  # rule 1: now > exp + 600
+KEY_NOT_YET_VALID = "KEY_NOT_YET_VALID"  # now < nbf - 60
+INVALID_SIGNATURE = "INVALID_SIGNATURE"  # rule 2
+MALFORMED_PAYLOAD = "MALFORMED_PAYLOAD"  # not the protocol's JSON ticket
+UNSUPPORTED_VERSION = "UNSUPPORTED_VERSION"  # rule 3
+ORIGIN_MISMATCH = "ORIGIN_MISMATCH"  # rule 4
+CHALLENGE_MISMATCH = "CHALLENGE_MISMATCH"  # rule 5
+AGE_INSUFFICIENT = "AGE_INSUFFICIENT"  # rule 6
+TICKET_NOT_YET_VALID = "TICKET_NOT_YET_VALID"  # rule 7
+TICKET_EXPIRED = "TICKET_EXPIRED"  # rule 7
+TICKET_LIFETIME_INVALID = "TICKET_LIFETIME_INVALID"  # rule 7
+REPLAY_DETECTED = "REPLAY_DETECTED"  # rule 8
+
+# Numbers fixed by PROTOCOL.md 3.7. Constants on purpose: a site cannot loosen them.
+KEY_EXPIRY_GRACE_SECONDS = 600
+CLOCK_SKEW_SECONDS = 60
+MAX_TICKET_LIFETIME_SECONDS = 300
+ALGORITHM = "RSABSSA-SHA384-PSS-Randomized"
+PSS_SALT_LENGTH = 48
+PREPARE_PREFIX_BYTES = 32
+MAX_TICKET_LENGTH = 8192

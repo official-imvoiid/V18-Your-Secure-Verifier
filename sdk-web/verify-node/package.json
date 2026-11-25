@@ -1,0 +1,45 @@
+{
+  "name": "@v18/verify",
+  "version": "1.0.0",
+  "description": "Check V18 age tickets on your website server (Node.js, built-in crypto only)",
+  "license": "UNLICENSED",
+  "author": "V18",
+  "keywords": [
+    "age verification",
+    "privacy",
+    "blind signatures",
+    "rfc9474",
+    "rsa-pss",
+    "v18"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "!dist/tests",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && tsc",
+    "test": "node --test \"dist/tests/*.test.js\""
+  },
+  "devDependencies": {
+    "@cloudflare/blindrsa-ts": "^0.4.6",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  },
+  "private": true
+}

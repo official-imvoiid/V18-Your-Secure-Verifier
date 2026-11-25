@@ -1,0 +1,52 @@
+{
+  "name": "@v18/widget",
+  "version": "1.0.0",
+  "description": "V18 private age check widget for websites: one script tag, Shadow DOM, no framework",
+  "license": "UNLICENSED",
+  "author": "V18",
+  "keywords": [
+    "age verification",
+    "age check",
+    "privacy",
+    "blind signatures",
+    "digital credentials",
+    "v18"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/v18.min.js",
+  "jsdelivr": "dist/v18.min.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./v18.min.js": "./dist/v18.min.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "./dist/index.js",
+    "./dist/v18.min.js",
+    "./dist/v18.js"
+  ],
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && tsc && node scripts/bundle.mjs",
+    "test": "node --test \"dist/tests/*.test.js\""
+  },
+  "dependencies": {
+    "qrcode-generator": "^2.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.7.2"
+  },
+  "private": true
+}

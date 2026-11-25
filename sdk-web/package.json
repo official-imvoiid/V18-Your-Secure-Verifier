@@ -1,0 +1,15 @@
+{
+  "name": "@v18/sdk-web",
+  "version": "1.0.0",
+  "description": "V18 web kit: the widget, the verify libraries and the demo site (release scripts only)",
+  "license": "UNLICENSED",
+  "scripts": {
+    "release": "node scripts/build-release.mjs",
+    "build": "npm run build --prefix verify-node && npm run build --prefix widget && npm run build --prefix demo-site",
+    "test": "npm test --prefix verify-node && npm test --prefix widget && npm test --prefix demo-site && python -m pytest verify-python/tests -q && npm run test:scripts",
+    "live:wallet": "node demo-site/scripts/live-wallet-e2e.mjs",
+    "countries": "node scripts/country-table.mjs",
+    "test:scripts": "node --test \"scripts/*.test.mjs\""
+  },
+  "private": true
+}

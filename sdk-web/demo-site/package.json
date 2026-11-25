@@ -1,0 +1,38 @@
+{
+  "name": "@v18/demo-site",
+  "version": "1.0.0",
+  "description": "Example 18+ website that checks V18 tickets on its own server",
+  "main": "dist/server.js",
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && tsc && esbuild src/client/test-wallet.ts --bundle --format=iife --target=es2020 --outfile=dist/public/test-wallet.js",
+    "start": "node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "mock-v18": "node dist/mock-v18/server.js",
+    "test": "node --test \"dist/tests/*.test.js\"",
+    "start:prod": "node dist/server.js --production"
+  },
+  "dependencies": {
+    "@cloudflare/blindrsa-ts": "^0.4.6",
+    "@v18/verify": "file:../verify-node",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@auth0/mdl": "^3.0.1",
+    "@peculiar/x509": "^1.12.3",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "cbor-x": "^1.6.0",
+    "esbuild": "^0.28.2",
+    "jose": "^5.9.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=20"
+  }
+}

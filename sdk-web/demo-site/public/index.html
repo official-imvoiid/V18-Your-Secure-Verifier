@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reserve Cellar · 18+ demo site for V18</title>
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+  <!-- The shop behind the gate (blurred, hidden from screen readers) -->
+  <div class="site blur" aria-hidden="true">
+    <header class="site-h"><span class="site-logo">Reserve Cellar</span>
+      <nav class="site-nav"><span>Wines</span><span>Whisky</span><span>Champagne</span><span>Gin</span></nav></header>
+    <div class="site-hero"></div>
+    <div class="grid">
+      <div class="tile"><i>🍷</i><b></b><s></s></div><div class="tile"><i>🥃</i><b></b><s></s></div>
+      <div class="tile"><i>🍾</i><b></b><s></s></div><div class="tile"><i>🍸</i><b></b><s></s></div>
+    </div>
+  </div>
+
+  <main class="gate">
+    <section class="gate-card" aria-labelledby="gate-title">
+      <div class="age18" aria-hidden="true">18+</div>
+      <h1 id="gate-title">This site is for adults</h1>
+      <p class="muted">Check your age to continue. It's private: this site only learns that you're 18 or older. Not your name, not your birthday.</p>
+
+      <!-- ============ The 2-line V18 embed ============ -->
+      <script src="{{WIDGET_SRC}}" integrity="{{WIDGET_INTEGRITY}}" crossorigin="anonymous" data-v18-server="{{V18_SERVER_URL}}"></script>
+      <button class="as-btn" id="verifyBtn" data-v18-min-age="18" data-v18-redirect="/adult-content">
+        <svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path class="s" d="M12 2.2l8 3.2v6.1c0 4.9-3.4 8.7-8 10.3-4.6-1.6-8-5.4-8-10.3V5.4z"/><path class="c" d="M8.4 12.1l2.5 2.5 4.7-5.1"/></svg>
+        Verify age
+      </button>
+      <!-- ============================================== -->
+
+      <p class="small">Private age check by V18. Nothing about you is stored.</p>
+<!--DEV-->
+      <p class="small warn" id="originWarn" hidden></p>
+<!--/DEV-->
+    </section>
+<!--DEV-->
+    <!-- Developer tools. Only in the demo's dev mode, and shown only when the V18 server is in dev mode. -->
+    <section class="dev" aria-labelledby="dev-title" id="devTools" hidden>
+      <div class="dev-h">
+        <h2 id="dev-title">Developer tools <span class="tag">dev only</span></h2>
+        <span class="tag test">TEST MODE</span>
+      </div>
+      <p class="small" id="serverLine">Checking the V18 server…</p>
+
+      <div class="dev-row">
+        <div class="dev-col">
+          <h3>Browser test wallet <span class="tag">dev only</span></h3>
+          <p class="small">Plays the V18 phone app inside this browser, with the <b>real</b> protocol:
+            a WebCrypto ES256 device key, a <code>test_dev</code> age card, and a ticket blind-signed by V18
+            (RFC 9474). Its key is not in secure hardware and there is no fingerprint, so it is for testing only.
+            It works only when the V18 server is in dev mode.</p>
+          <label class="field">Test birth date (test data)
+            <select id="birthDate">
+              <option value="1990-01-01">1990-01-01 (adult)</option>
+              <option value="2012-06-01">2012-06-01 (under 18: V18 should refuse)</option>
+            </select>
+          </label>
+          <div class="btns">
+            <button class="btn pri" id="runWallet">Run the test wallet in this browser</button>
+            <button class="btn" id="resetWallet">Delete the test card</button>
+          </div>
+          <p class="small">Or press <b>Verify age</b>, choose <b>Use my phone</b>, and use the widget's
+            <b>Simulate a phone with the test wallet</b> button: that goes through the real QR hand-off session.</p>
+          <p class="small" id="walletLine"></p>
+          <label class="field">Widget theme
+            <select id="theme"><option value="auto">Auto (follow the system)</option><option value="light">Light</option><option value="dark">Dark</option></select>
+          </label>
+        </div>
+        <div class="dev-col">
+          <h3>Crypto inspector</h3>
+          <div class="inspector" id="inspector" role="log" aria-live="polite" aria-label="Crypto inspector log">
+            <div class="ln muted">Each step of the test wallet shows up here, with real values.</div>
+          </div>
+          <button class="lnk" id="clearLog">Clear</button>
+        </div>
+      </div>
+    </section>
+<!--/DEV-->
+  </main>
+<!--DEV-->
+  <script src="/dev/test-wallet.js"></script>
+  <script nonce="{{NONCE}}">
+  (function () {
+    var SERVER = document.querySelector('script[data-v18-server]').getAttribute('data-v18-server');
+    var inspector = document.getElementById('inspector');
+    var runBtn = document.getElementById('runWallet');
+    var TW = window.V18DemoTestWallet;
+
+    function log(kind, text) {
+      var d = document.createElement('div');
+      d.className = 'ln ' + kind;
+      d.textContent = (kind === 'ok' ? '✓ ' : kind === 'err' ? '✕ ' : kind === 'data' ? '  · ' : '› ') + text;
+      inspector.appendChild(d);
+      inspector.scrollTop = inspector.scrollHeight;
+    }
+    if (TW) TW.onLog(log);
+
+    document.getElementById('clearLog').onclick = function () { inspector.innerHTML = ''; };
+    document.getElementById('birthDate').onchange = function (e) { TW && TW.setBirthDate(e.target.value); };
+    document.getElementById('theme').onchange = function (e) {
+      document.getElementById('verifyBtn').setAttribute('data-v18-theme', e.target.value);
+    };
+
+    // The developer tools appear only when the V18 server says it is in dev mode.
+    fetch('/api/status').then(function (r) { return r.json(); }).then(function (s) {
+      var line = document.getElementById('serverLine');
+      var tools = document.getElementById('devTools');
+      if (!s.v18.reachable) {
+        tools.hidden = false;
+        tools.querySelector('.dev-row').hidden = true;
+        tools.querySelector('.tag.test').hidden = true;
+        line.textContent = 'V18 server ' + s.v18ServerUrl + ' is not reachable. Start it (npm run dev --prefix server) or the mock (npm run mock-v18 --prefix sdk-web/demo-site).';
+        line.className = 'small warn';
+        return;
+      }
+      if (!s.v18.devMode) return; // a production V18 server: no developer tools at all
+      tools.hidden = false;
+      line.textContent = 'V18 server: ' + s.v18ServerUrl + ' (dev mode)' +
+        (s.v18.version === 'mock' ? '. This is the MOCK V18 server (test only).' : '.');
+      document.getElementById('walletLine').textContent = s.v18.wallet === 'ready'
+        ? 'This V18 server accepts phone wallet IDs. The widget offers "Use a phone wallet ID" in browsers that have the Digital Credentials API.'
+        : 'This V18 server does not accept phone wallet IDs, so the widget does not offer them.';
+      if (location.origin !== s.siteOrigin) {
+        var w = document.getElementById('originWarn');
+        w.hidden = false;
+        w.textContent = 'You opened ' + location.origin + ' but this site is set up as ' + s.siteOrigin +
+          '. Tickets are locked to one origin, so open ' + s.siteOrigin + ' instead.';
+      }
+    }).catch(function () {});
+
+    // When the widget hands a ticket to our server, note it in the inspector.
+    document.addEventListener('v18:verified', function () {
+      log('ok', 'The widget gave the ticket to this site, and its server accepted it (@v18/verify).');
+    });
+    document.addEventListener('v18:error', function (e) {
+      log('err', 'Widget: ' + (e.detail && e.detail.error && e.detail.error.message));
+    });
+
+    // The full protocol flow, run directly in this browser (no widget, no QR).
+    runBtn.onclick = async function () {
+      if (!TW) { log('err', 'The test wallet script did not load'); return; }
+      runBtn.disabled = true;
+      inspector.innerHTML = '';
+      try {
+        var w = TW.wallet(SERVER);
+        log('step', 'Checking the V18 server (GET /v1/health)');
+        var h = await w.health();
+        if (!h.devMode) throw new Error('The V18 server is not in dev mode, so test_dev cards are switched off.');
+        log('ok', 'V18 server is in dev mode (TEST MODE)');
+
+        log('step', '0. Asking this website for a challenge for this visit (POST /v18/challenge)');
+        var cr = await fetch('/v18/challenge', { method: 'POST' });
+        var c = await cr.json();
+        if (!cr.ok) throw new Error('Site challenge failed: ' + (c.error || cr.status));
+        log('data', 'Website challenge: ' + c.challenge.slice(0, 18) + '…');
+
+        var ticket = await w.makeTicket({ origin: location.origin, challenge: c.challenge, minAge: 18 });
+
+        log('step', '6. Giving the ticket to this website\'s server (POST /v18/verify)');
+        var vr = await fetch('/v18/verify', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ticket: ticket }) });
+        var v = await vr.json();
+        if (!vr.ok) throw new Error('The site refused the ticket: ' + v.code + ' (' + v.error + ')');
+        log('ok', 'The site checked the seal OFFLINE with V18\'s public key: ' + v.minAge + '+ confirmed. Unlocking…');
+        setTimeout(function () { location.href = '/adult-content'; }, 1200);
+      } catch (err) {
+        log('err', err && err.message ? err.message : String(err));
+        runBtn.disabled = false;
+      }
+    };
+
+    document.getElementById('resetWallet').onclick = async function () {
+      if (!TW) return;
+      try {
+        var had = await TW.wallet(SERVER).deleteCard();
+        log(had ? 'ok' : 'step', had ? 'Test card deleted' : 'There was no test card to delete');
+      } catch (err) {
+        log('err', 'Could not delete on the server (' + err.message + '). Forgot it in this browser anyway.');
+      }
+    };
+  })();
+  </script>
+<!--/DEV-->
+</body>
+</html>
