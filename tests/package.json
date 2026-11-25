@@ -1,0 +1,20 @@
+{
+  "name": "@v18/product-tests",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "End-to-end tests of the real V18 product: the built server, real cryptography, and the real website verify libraries.",
+  "scripts": {
+    "test": "node --test --test-concurrency=1 --test-reporter=spec \"product/*.test.mjs\"",
+    "all": "node run-all.mjs"
+  },
+  "dependencies": {
+    "@cloudflare/blindrsa-ts": "^0.4.6",
+    "@v18/verify": "file:../sdk-web/verify-node",
+    "jose": "^6.2.16"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "license": "UNLICENSED"
+}
