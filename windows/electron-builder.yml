@@ -1,0 +1,30 @@
+# V18 for Windows: NSIS installer. "npm run dist" builds it into release/.
+appId: com.v18.desktop
+productName: V18
+copyright: V18
+directories:
+  output: release
+  buildResources: build
+# esbuild already bundled everything into dist/, so no node_modules are shipped.
+files:
+  - dist/**/*
+  - package.json
+asar: true
+asarUnpack:
+  - dist/native/*.node
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  icon: build/icon.ico
+  artifactName: V18-Setup-${version}.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: V18
+  uninstallDisplayName: V18
+  # Registers v18:// for this user, so websites can open the app (see build/installer.nsh).
+  include: build/installer.nsh

@@ -1,0 +1,83 @@
+/* V18 for Windows: app layer on top of v18.css. These classes replace the inline style=""
+   attributes in the design mock-ups, because the page's CSP does not allow inline styles. */
+
+html, body { margin: 0; height: 100%; }
+body.as { width: 100vw; height: 100vh; overflow: hidden; }
+#app { position: absolute; inset: 0; }
+
+/* window chrome: the title bar is draggable; Windows draws the caption buttons (titleBarOverlay) */
+.drag { -webkit-app-region: drag; user-select: none; }
+.drag button, .drag a, .drag .badge { -webkit-app-region: no-drag; }
+.tb { padding-right: 150px; }
+.tb-badge { height: 20px; font-size: 11px; }
+.testbar { display: flex; align-items: center; gap: 8px; padding: 6px 16px; font-size: 12px; line-height: 16px; background: var(--warn-bg); color: var(--warn); border-bottom: 1px solid var(--stroke); flex: none; }
+.testbar.err { background: var(--err-bg); color: var(--err); }
+.testbar b { font-weight: 700; }
+
+/* nav uses buttons instead of links */
+.nav .navi { position: relative; display: flex; align-items: center; gap: 14px; height: 40px; padding: 0 12px; border-radius: 5px; border: 0; background: none; text-align: left; cursor: pointer; font: inherit; color: inherit; }
+.nav .navi:hover { background: var(--hover); }
+.nav .navi.sel { background: var(--sel); font-weight: 600; }
+.nav .navi.sel::before { content: ""; position: absolute; left: 0; top: 11px; bottom: 11px; width: 3px; border-radius: 2px; background: var(--accent); }
+.main { overflow-y: auto; }
+.main.jcenter { justify-content: center; }
+.btn:disabled { opacity: .5; cursor: default; }
+.btn.sm-btn { height: 32px; padding: 0 12px; }
+.as .lnk { color: var(--accent-tx); }
+button:focus-visible, .opt:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* spacing helpers */
+.g0 { gap: 0; } .g2 { gap: 2px; } .g4 { gap: 4px; } .g6 { gap: 6px; } .g8 { gap: 8px; } .g10 { gap: 10px; } .g12 { gap: 12px; }
+.g14 { gap: 14px; } .g16 { gap: 16px; } .g20 { gap: 20px; } .g28 { gap: 28px; } .g36 { gap: 36px; } .g40 { gap: 40px; } .g48 { gap: 48px; }
+.mt4 { margin-top: 4px; } .mt6 { margin-top: 6px; } .mt8 { margin-top: 8px; } .mt10 { margin-top: 10px; }
+.ml-auto { margin-left: auto; } .ml9 { margin-left: 9px; } .px8 { padding: 0 8px; } .py12 { padding: 12px 0 4px; }
+.w100 { width: 100%; } .w440 { width: 440px; } .mw200 { min-width: 200px; } .mw360 { max-width: 360px; } .mw520 { max-width: 520px; } .mw580 { max-width: 580px; }
+.flex1 { flex: 1; } .noflex { flex: none; } .astart { align-self: flex-start; } .ai-start { align-items: flex-start; } .ai-center { align-items: center; }
+.ai-end { align-items: flex-end; } .ai-stretch { align-items: stretch; } .aicenter { align-items: center; } .jb { justify-content: space-between; } .tcenter { text-align: center; }
+.center-y { margin: auto 0; }
+.b6 { font-weight: 600; } .tx2 { color: var(--tx2); } .f13 { font-size: 13px; line-height: 18px; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.pad-lg { padding: 32px 36px; } .pad-md { padding: 22px 24px; } .pad-sm { padding: 14px 16px; } .pad-dlg { padding: 24px 28px; }
+.h250 { height: 250px; }
+
+/* welcome */
+.welcome-opts { width: 660px; align-items: stretch; }
+.opt.tall { flex: 1; flex-direction: column; align-items: flex-start; gap: 8px; padding: 16px 18px; }
+
+/* home facts */
+.facts { padding: 2px 20px; }
+.fact { display: flex; align-items: center; justify-content: space-between; height: 50px; border-bottom: 1px solid var(--stroke); }
+.fact.last { border-bottom: 0; }
+.notice .x.sm { width: 32px; height: 32px; margin: -6px -8px -6px 0; }
+.agecard.test { background: repeating-linear-gradient(135deg, var(--accent), var(--accent) 18px, var(--accent-h) 18px, var(--accent-h) 36px); }
+
+/* QR boxes */
+.qr240 { width: 240px; height: 240px; }
+.qr180 { width: 180px; height: 180px; flex: none; }
+.center-box { display: flex; align-items: center; justify-content: center; }
+.qr.dim { background: var(--card2); }
+
+/* building */
+.seal-lg { width: 150px; height: 150px; margin: 12px; }
+.seal .spin.ring { position: absolute; inset: -12px; width: auto; height: auto; border-width: 3px; }
+.pl .bad .d { background: var(--err); border-color: var(--err); color: var(--card); }
+.pl .bad .d .ic { width: 14px; height: 14px; stroke-width: 2.6; }
+.pl li:not(.done):not(.cur):not(.bad) { color: var(--tx3); }
+.pl .done .d .ic { width: 14px; height: 14px; }
+
+/* settings */
+.set.setlink { width: 100%; text-align: left; font: inherit; color: inherit; cursor: pointer; }
+.set.setlink:hover { background: var(--card2); }
+.set > .ic { color: var(--tx2); }
+.dlg.mid { top: 50%; }
+
+/* the site-asks window */
+.askwin { position: absolute; inset: 0; display: flex; flex-direction: column; background: var(--layer); }
+.askwin .tb.dlg-tb { height: 36px; flex: none; padding-left: 16px; }
+.askwin .db { flex: 1; display: flex; flex-direction: column; gap: 16px; padding: 12px 28px 20px; overflow-y: auto; }
+.askwin .df { display: flex; gap: 8px; padding: 20px 24px; background: var(--bg); border-top: 1px solid var(--stroke); flex: none; }
+.askwin .df > * { flex: 1; }
+.si.big { width: 96px; height: 96px; }
+.seal.sm-seal { width: 80px; height: 80px; }
+.seal.sm-seal::after { inset: -6px; }

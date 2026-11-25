@@ -1,0 +1,32 @@
+[package]
+name = "v18-hello"
+version = "0.1.0"
+edition = "2021"
+description = "V18 for Windows: Windows Hello (KeyCredentialManager) device keys, exposed to Node/Electron via napi-rs"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi = { version = "3", default-features = false, features = ["napi6"] }
+napi-derive = "3"
+windows = { version = "0.62", features = [
+  "Foundation",
+  "Security_Credentials",
+  "Security_Cryptography",
+  "Security_Cryptography_Core",
+  "Storage_Streams",
+  "System",
+  "Win32_Foundation",
+  "Win32_System_WinRT",
+  "Win32_UI_WindowsAndMessaging",
+] }
+windows-future = "0.3"
+
+[build-dependencies]
+napi-build = "2"
+
+[profile.release]
+lto = true
+strip = "symbols"
