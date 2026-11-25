@@ -1,0 +1,42 @@
+# V18 server + PostgreSQL (PROTOCOL.md 4c.7). NOT RUN on the build machine
+# (Docker is not installed there). See docs/server/DEPLOY.md.
+#
+# Run from the repository root:
+#   docker compose -f server/docker-compose.yml up --build
+# Put the secrets in server/.env first (never commit it). See DEPLOY.md.
+services:
+  db:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: v18
+      POSTGRES_USER: v18
+      POSTGRES_PASSWORD: ${V18_DB_PASSWORD:?set V18_DB_PASSWORD in server/.env}
+    volumes:
+      - v18-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U v18 -d v18"]
+      interval: 5s
+      retries: 20
+
+  server:
+    build:
+      context: ..
+      dockerfile: server/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file: .env
+    environment:
+      V18_DATABASE_URL: postgres://v18:${V18_DB_PASSWORD}@db:5432/v18
+      V18_PUBLIC_URL: ${V18_PUBLIC_URL:-https://api.v18.example}
+      V18_TRUST_PROXY: "1"
+    ports:
+      - "8080:8080"
+    volumes:
+      - v18-data:/data
+
+volumes:
+  v18-pg:
+  v18-data:

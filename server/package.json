@@ -1,0 +1,48 @@
+{
+  "name": "@v18/server",
+  "version": "0.3.0",
+  "description": "V18 verification and blind-signing server",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && tsc && tsc -p tsconfig.scripts.json",
+    "start": "cross-env V18_DEV_MODE=1 node dist/index.js",
+    "start:prod": "node dist/index.js",
+    "dev": "cross-env V18_DEV_MODE=1 tsx watch src/index.ts",
+    "test": "node --test --test-reporter=spec dist/tests/**/*.test.js",
+    "dev-client": "tsx scripts/dev-client.ts",
+    "fetch-artifacts": "tsx scripts/fetch-artifacts.ts",
+    "make-aadhaar-fixtures": "tsx scripts/make-aadhaar-fixtures.ts",
+    "test:pg": "tsx scripts/test-pg.ts",
+    "test:all": "npm test && npm run test:pg",
+    "dev-wallet": "tsx scripts/dev-wallet.ts"
+  },
+  "dependencies": {
+    "@anon-aadhaar/core": "^2.4.3",
+    "@auth0/mdl": "3.0.1",
+    "@cloudflare/blindrsa-ts": "^0.4.6",
+    "@peculiar/asn1-android": "2.11.1",
+    "@peculiar/asn1-schema": "2.11.1",
+    "@peculiar/x509": "1.14.3",
+    "@v18/connectors": "file:../connectors",
+    "@zk-email/helpers": "6.4.2",
+    "cbor-x": "1.6.9",
+    "express": "^4.21.2",
+    "helmet": "8.3.0",
+    "jose": "^6.2.16",
+    "pg": "8.23.1",
+    "prom-client": "15.1.3",
+    "reflect-metadata": "0.2.2",
+    "snarkjs": "0.7.6"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "@types/pg": "8.23.1",
+    "cross-env": "^7.0.3",
+    "embedded-postgres": "17.11.0-beta.19",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "private": true
+}

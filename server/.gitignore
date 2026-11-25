@@ -1,0 +1,21 @@
+# Dev data: ticket signing PRIVATE keys (dev file store), the SQLite database,
+# the attestation revocation cache. Never commit.
+data/
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# Anon Aadhaar circuit files: downloaded by npm run fetch-artifacts (about 900 MB).
+# Only the manifest with the pinned SHA-256 values is committed.
+assets/artifacts/*
+!assets/artifacts/manifest.json
+
+# TEST IACA made by dev-mode servers (holds a TEST private key).
+assets/iaca/test/
+
+# Secrets for docker compose.
+.env
+
+node_modules/
+dist/

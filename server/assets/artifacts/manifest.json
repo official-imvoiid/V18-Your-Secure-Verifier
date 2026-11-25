@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "set": "anon-aadhaar-v2.0.0",
+  "about": "Official Anon Aadhaar v2 circuit files, as used by @anon-aadhaar/core 2.4.x (artifactUrls.v2 in its src/constants.ts). SHA-256 values were pinned by V18 on 2026-11-19 after download from the official bucket; `npm run fetch-artifacts` refuses any file that does not match.",
+  "sourceBase": "https://anon-aadhaar-artifacts.s3.eu-central-1.amazonaws.com/v2.0.0/",
+  "files": [
+    {
+      "name": "vkey.json",
+      "role": "verification_key",
+      "source": "vkey.json",
+      "sha256": "40f2ea24b56ffe2b6e6e3578053cbda15e773cb560697bac883a404077fcf177",
+      "bytes": 4388,
+      "optional": false
+    },
+    {
+      "name": "aadhaar-verifier.wasm",
+      "role": "witness_wasm",
+      "source": "aadhaar-verifier.wasm",
+      "sha256": "4894923663fafda95beb70abca4112ea97a62058c9a46419a274f04236f10d4f",
+      "bytes": 10469686,
+      "optional": false
+    },
+    {
+      "name": "circuit_final.zkey",
+      "role": "proving_key",
+      "source": "circuit_final.zkey",
+      "sha256": "0d443ea85279b0370b53202f5e768ca9098cfcb5bb14f8ca8323d2266822c492",
+      "bytes": 612082146,
+      "optional": false
+    },
+    {
+      "name": "circuit_final_0.gz",
+      "role": "proving_key_chunk",
+      "source": "chunked_zkey/circuit_final_0.gz",
+      "sha256": "aa28a374ba89b375f1b13d8e8a2aa6f2eacfe49f833539c30cdb5ce3ce7d51df",
+      "bytes": 8525757,
+      "optional": true
+    },
+    {
+      "name": "circuit_final_1.gz",
+      "role": "proving_key_chunk",
+      "source": "chunked_zkey/circuit_final_1.gz",
+      "sha256": "7146fefde3c49918aa3cd0178c1d1c7024dd9d5856a5b0f9bbbcf6855c86972f",
+      "bytes": 6238719,
+      "optional": true
+    },
+    {
+      "name": "circuit_final_2.gz",
+      "role": "proving_key_chunk",
+      "source": "chunked_zkey/circuit_final_2.gz",
+      "sha256": "fca410970b2ad407d09892474b312d852796cae3b51df84737954913d0b5188c",
+      "bytes": 5735232,
+      "optional": true
+    },
+    {
+      "name": "circuit_final_3.gz",
+      "role": "proving_key_chunk",
+      "source": "chunked_zkey/circuit_final_3.gz",
+      "sha256": "78360576456d28a3bdee7473d1f9d2e0d988f68989ff8fee3c6e6bbea8c05764",
+      "bytes": 26831998,
+      "optional": true
+    },
+    {
+      "name": "circuit_final_4.gz",
+      "role": "proving_key_chunk",
+      "source": "chunked_zkey/circuit_final_4.gz",
+      "sha256": "be73ffb317ceb4b3f50dc791de488e13865d584c6e4c1294e03d9d121653e34f",
+      "bytes": 40012897,
+      "optional": true
+    },
+    {
+      "name": "circuit_final_5.gz",
+      "role": "proving_key_chunk",
+      "source": "chunked_zkey/circuit_final_5.gz",
+      "sha256": "4d0b9eb74092a59cf50184dbd3e0473aad48a03d528e4d9106bf410637b176fc",
+      "bytes": 24679358,
+      "optional": true
+    },
+    {
+      "name": "circuit_final_6.gz",
+      "role": "proving_key_chunk",
+      "source": "chunked_zkey/circuit_final_6.gz",
+      "sha256": "5ce13c3ede49675f56fa883344f8374d0ff5b2a81a27909909480894dc273175",
+      "bytes": 34121118,
+      "optional": true
+    },
+    {
+      "name": "circuit_final_7.gz",
+      "role": "proving_key_chunk",
+      "source": "chunked_zkey/circuit_final_7.gz",
+      "sha256": "e3d77a1ba94683c63f8485e8075a5a3b4f2c619b25e8fe23c9416b5663b13b28",
+      "bytes": 27311040,
+      "optional": true
+    },
+    {
+      "name": "circuit_final_8.gz",
+      "role": "proving_key_chunk",
+      "source": "chunked_zkey/circuit_final_8.gz",
+      "sha256": "4526aeef9b23e0f05901856b0ba53d15dd4b5e0892fb6e8c04b5084cc5bbcaa4",
+      "bytes": 61226907,
+      "optional": true
+    },
+    {
+      "name": "circuit_final_9.gz",
+      "role": "proving_key_chunk",
+      "source": "chunked_zkey/circuit_final_9.gz",
+      "sha256": "07f59ef97c9283a55da5856dd3ca70c6f9f61a3721fe2040c29232cca968bba8",
+      "bytes": 61226349,
+      "optional": true
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+node_modules
+dist
+data
+assets/artifacts/*
+!assets/artifacts/manifest.json
+assets/iaca/test
+.env
