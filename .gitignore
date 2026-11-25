@@ -1,0 +1,42 @@
+# Installed packages and build outputs (rebuilt by SETUP.bat or npm run build)
+node_modules/
+dist/
+target/
+.dart_tool/
+.gradle/
+.cxx/
+.kotlin/
+__pycache__/
+.pytest_cache/
+.venv*/
+mobile/build/
+windows/release/
+windows/native/v18-hello/v18_hello.node
+sdk-web/release/
+
+# Private to one PC: dev signing keys, dev database, local SDK paths, secrets
+server/data/
+*.sqlite
+*.sqlite-*
+.env
+.env.*
+!.env.example
+mobile/android/local.properties
+*.jks
+*.keystore
+key.properties
+setup-log.txt
+
+# Anon Aadhaar circuit files (about 900 MB): download with npm run fetch-artifacts --prefix server
+server/assets/artifacts/*
+!server/assets/artifacts/manifest.json
+
+# TEST issuer keys made by dev-mode servers
+server/assets/iaca/test/
+
+# Old Kotlin prototype, replaced by the Flutter app in mobile/
+/android/
+
+# Editor settings
+.vscode/
+.idea/

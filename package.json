@@ -1,0 +1,27 @@
+{
+  "name": "v18",
+  "version": "0.1.0",
+  "description": "V18: final-year project prototype of a privacy-first age check",
+  "scripts": {
+    "build": "npm run build --prefix connectors && npm run build --prefix sdk-web/verify-node && npm run build --prefix server && npm run build --prefix sdk-web/widget && npm run build --prefix sdk-web/demo-site && npm run build --prefix windows",
+    "test:server": "npm test --prefix server",
+    "test:verify-node": "npm test --prefix sdk-web/verify-node",
+    "test:widget": "npm test --prefix sdk-web/widget",
+    "test:demo": "npm test --prefix sdk-web/demo-site",
+    "test:verify-python": "python -m pytest sdk-web/verify-python/tests -q",
+    "test:windows": "npm test --prefix windows",
+    "test:windows:e2e": "npm run test:e2e --prefix windows",
+    "test": "npm run test:server && npm run test:connectors && npm run test:verify-node && npm run test:widget && npm run test:demo && npm run test:verify-python && npm run test:catalog && npm run test:windows",
+    "start:server": "npm run dev --prefix server",
+    "start:server:prod": "npm run start:prod --prefix server",
+    "start:demo": "npm start --prefix sdk-web/demo-site",
+    "start:windows": "npm start --prefix windows",
+    "dev-client": "npm run dev-client --prefix server --",
+    "test:connectors": "npm test --prefix connectors",
+    "test:catalog": "python -m pytest catalog -q",
+    "test:server:pg": "npm run test:pg --prefix server",
+    "test:product": "npm test --prefix tests",
+    "test:all": "node tests/run-all.mjs"
+  },
+  "private": true
+}
